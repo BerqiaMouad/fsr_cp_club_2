@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>FSR CP Club</title>
+</head>
+<body>
+    <!-- transition ==================================== -->
+    <div class="transition transition-1"><h1><span class="texttransite"></span></h1></div>
+    <div class="transition transition-2"><h1><span class="texttransite2"></span></h1></div>
+    <!-- transition ==================================== -->
+
+    <div class="container" id="container">
+        <!-- home section =============================================== -->
+        <section class="home active" id="home">
+            <div class="content">
+                <h1><span class="typing1"></span></h1>
+                <button class="btn" onclick="go_to('about', 'home')"><span>Let's Go!</a></button>
+            </div>
+        </section>
+        <!-- home section =============================================== -->
+
+        <!-- about section ============================================== -->
+        <section class="about" id="about">
+            <div class="content">
+                <h1>About The <span class="effect">Club</span></h1>
+                <p>
+                    The "Competitive Programming" club of the Faculty of Sciences of Rabat is an opportunity for students to learn about the various competitions organized at national, regional and international level. 
+                    The main objective of the club is to recruit and train students to represent the Faculty of Sciences of Rabat in competitions like MCPC (Moroccan Collegiate Programming Contest), ACPC and ACM ICPC.
+                </p>
+                <button class="button" onclick="go_to_2('activities', 'about')">Check Out Our Activities!</button>
+            </div>
+        </section>
+        <!-- about section ============================================== -->
+
+        <!-- activities section ========================================= -->
+        <section class="activities" id="activities">
+            <div class="content">
+                <h1>Among the activities of the club, <span class="effect">we mention:</span></h1>
+                <ul>
+                    <li>Organization of weekly online sessions on algorithmic topics to provide students with help in solving problems.</li>
+                    <li>Organize local competitions to allow students to train and become familiar with the platforms used by the different competitions.</li>
+                    <li>Organize competition editions at the national level.</li>
+                    <li>Participation in competitions organized by clubs from other Moroccan establishments.</li>
+                    <li>Organization of workshops and meetings to discuss the difficulties encountered by students during competitions and / or training.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- activities section ========================================= -->
+    </div>
+
+
+    <!-- scripts ========================== -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script src="/js/typing.js"></script>
+    <script src="/js/index.js"></script>
+    <!-- scripts ========================== -->
+</body>
+</html>

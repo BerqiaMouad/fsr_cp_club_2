@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Source+Code+Pro&display=swap');
+
+
+*{
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    a{
+        color: antiquewhite;
+        text-decoration: none;
+    }
+}
+
+// body ===================================
+body{
+    height: 100vh;
+    width: 100vw;
+    
+    .transition-1{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 101;
+        background-color: #212121;
+        opacity: 0;
+        pointer-events: none;
+        transition: 1s ease-out;
+        
+        h1{
+            color: antiquewhite;
+            font-size: 50px;
+            z-index: inherit;
+        }
+    }
+    .transition-1.active_transition{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .transition-2{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        bottom: 0;
+        z-index: 101;
+        background-color: #212121;
+        transition: 1s ease-out;
+        
+        h1{
+            color: antiquewhite;
+            font-size: 50px;
+            z-index: inherit;
+        }
+    }
+    .transition-2.active_transition{
+        left: 0px;
+    }
+
+
+
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        section{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+
+            // home ==============================================
+            &:nth-of-type(1){
+                pointer-events: none;
+                background: rgba(0, 0, 0, .6) url(/images/homebg.jpg) no-repeat;
+                background-size: cover;
+                background-blend-mode: darken;
+                transition: 1s;
+                
+                .content{
+                    h1{
+                        color: antiquewhite;
+                        font-size: 60px;
+                        padding-bottom: 40px;
+                    }
+                }
+            }
+            &:nth-of-type(1).active{
+                pointer-events: all;
+                z-index: 2;
+                transition: 1s;
+            }
+            // home ================================================
+
+
+            // about ===============================================
+            &:nth-of-type(2){
+                pointer-events: none;
+                background: rgba(0, 0, 0, .6) url(/images/aboutbg.jpg) no-repeat;
+                background-size: cover;
+                background-blend-mode: darken;
+                transition: 1s;
+
+                .content{
+                    text-align: center;
+                    h1{
+                        color: antiquewhite;
+                        font-size: 60px;
+                        padding-bottom: 40px;
+                        text-align: center;
+
+                        .effect{
+                            color: #212121;
+                            background-color: antiquewhite;
+                            border-radius: 20px;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                    }
+                    p{
+                        color: antiquewhite;
+                        font-size: 20px;
+                        text-align: justify;
+                        margin-left: 15%;
+                        margin-right: 15%;
+                        padding-bottom: 20px;
+                    }
+                    .button{
+                        position: relative;
+                        padding: 1em 1.5em;
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                        outline: none;
+                        font-size: 18px;
+                        margin: 1em 0.8em;
+                        color: antiquewhite;
+                        &::after,
+                        &::before{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            width: 20%;
+                            height: 20%;
+                            border: 2px solid;
+                            transition: all 0.6s ease;
+                            border-radius: 2px;
+                        }
+                        &::after{
+                            bottom: 0;
+                            right: 0;
+                            border-top-color: transparent;
+                            border-left-color: transparent;
+                            border-bottom-color: antiquewhite;
+                            border-right-color: antiquewhite;
+                        }
+                        &::before{
+                            top: 0;
+                            left: 0;
+                            border-bottom-color: transparent;
+                            border-right-color: transparent;
+                            border-top-color: antiquewhite;
+                            border-left-color: antiquewhite;
+                        }
+
+                        &:hover:after,
+                        &:hover:before{
+                            width: 100%;
+                            height: 100%
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(2).active{
+                z-index: 2;
+                pointer-events: all;
+            }
+            // about ===============================================
+
+            // activities ====================================================
+            &:nth-of-type(3){
+                pointer-events: none;
+                background: rgba(0, 0, 0, .8) url(/images/activitiesbg.jpg) no-repeat;
+                background-size: cover;
+                background-blend-mode: darken;
+                transition: 1s;
+
+                .content{
+                    h1{
+                        color: antiquewhite;
+                        font-size: 40px;
+                        padding-bottom: 40px;
+                        text-align: center;
+
+                        .effect{
+                            color: #212121;
+                            background-color: antiquewhite;
+                            border-radius: 20px;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                    }
+                    ul{
+                        color: antiquewhite;
+                        font-size: 20px;
+                        text-align: justify;
+                        margin-left: 15%;
+                        margin-right: 15%;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+            &:nth-of-type(3).active{
+                z-index: 2;
+            }
+
+            // activities ====================================================
+
+
+            .btn{
+                border: none;
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                text-transform: uppercase;
+                outline: none;
+                overflow: hidden;
+                position: relative;
+                color: #fff;
+                font-weight: 700;
+                font-size: 18px;
+                background-color: transparent;
+                padding: 10px 30px;
+                margin: 0 auto;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.50);
+            }
+            .btn span {
+                position: relative; 
+                z-index: 1;
+            }
+            .btn:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 490%;
+                width: 140%;
+                background: rgb(163, 163, 163);
+                -webkit-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+                -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+                transform: translateX(-98%) translateY(-25%) rotate(45deg);
+            }
+            .btn:hover:after {
+                -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+                transform: translateX(-9%) translateY(-25%) rotate(45deg);
+            }
+        }
+    }
+}
