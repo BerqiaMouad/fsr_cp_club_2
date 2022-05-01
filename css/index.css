@@ -16,7 +16,7 @@ body {
   width: 100vw;
 }
 
-body .transition-1 {
+body .transition-3, body .transition-1 {
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,13 +39,13 @@ body .transition-1 {
   transition: 1s ease-out;
 }
 
-body .transition-1 h1 {
+body .transition-3 h1, body .transition-1 h1 {
   color: antiquewhite;
   font-size: 50px;
   z-index: inherit;
 }
 
-body .transition-1.active_transition {
+body .transition-3.active_transition, body .transition-1.active_transition {
   opacity: 1;
   pointer-events: all;
 }
@@ -255,7 +255,7 @@ body .container section:nth-of-type(3) .content .btnfos {
   font-size: 16px;
   font-weight: 400;
   line-height: 45px;
-  max-width: 160px;
+  max-width: 200px;
   margin: 0 auto 2em;
   position: relative;
   text-transform: uppercase;
@@ -286,6 +286,59 @@ body .container section:nth-of-type(3) .content .mybtnfos:hover {
 }
 
 body .container section:nth-of-type(3).active {
+  z-index: 2;
+  pointer-events: all;
+}
+
+body .container section:nth-of-type(4) {
+  pointer-events: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body .container section:nth-of-type(4) .bgvideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-filter: brightness(23%);
+          filter: brightness(23%);
+}
+
+body .container section:nth-of-type(4) .firstpar {
+  font-size: 23px;
+  color: antiquewhite;
+  text-align: justify;
+  padding-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+body .container section:nth-of-type(4) .grids_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 4fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 4fr));
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+body .container section:nth-of-type(4) .grids_container :nth-child(2), body .container section:nth-of-type(4) .grids_container :last-child {
+  margin-left: 20px;
+}
+
+body .container section:nth-of-type(4) .grids_container p {
+  color: antiquewhite;
+  font-size: 18px;
+  text-align: justify;
+}
+
+body .container section:nth-of-type(4) .grids_container p span {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+body .container section:nth-of-type(4).active {
   z-index: 2;
   pointer-events: all;
 }

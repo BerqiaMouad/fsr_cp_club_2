@@ -11,6 +11,7 @@
     <!-- transition ==================================== -->
     <div class="transition transition-1"><h1><span class="texttransite"></span></h1></div>
     <div class="transition transition-2"><h1><span class="texttransite2"></span></h1></div>
+    <div class="transition transition-3"><h1><span class="texttransite3"></span></h1></div>
     <!-- transition ==================================== -->
 
     <div class="container" id="container">
@@ -48,12 +49,33 @@
                     <li>Organization of workshops and meetings to discuss the difficulties encountered by students during competitions and / or training.</li>
                 </ul>
                 <div>
-                    <button class="btnfos mybtnfos">Some Text</button>
+                    <button class="btnfos mybtnfos" onclick="go_to_3('description', 'activities')">Club Description</button>
                 </div>
             </div>
         </section>
         <!-- activities section ========================================= -->
-
+        <section class="description" id="description">
+            <video autoplay loop muted plays-inline class="bgvideo">
+                <source src="/images/descriptionbg.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <p class="firstpar">The first session will be an introduction to competitive programming and what we’re going to learn throughout the year. After the first session we will hold an evaluation contest (details will be discussed during the session), the objective of this contest is to divide members into 3 groups:</p>
+                <div class="grids_container">
+                    <p>
+                        <span>Class A:<br></span>
+                        students that are new to programming languages and computer science in general, this class introduces programming languages and competitive programming.
+                    </p>
+                    <p>
+                        <span>Class B:<br></span>
+                        this class is for students that have experience using programming languages and are new to competitive programming. The objective of this class is to provide basic algorithms/ data structures knowledge, and implementation skills.
+                    </p>
+                    <p>
+                        <span>Class C:<br></span>
+                        this class is for students that have experience in competitive programming, The members will work on learning advanced algorithms and enhancing problem solving skills.
+                    </p>
+                </div>
+            </div>
+        </section>
         <!--  -->
     </div>
 
