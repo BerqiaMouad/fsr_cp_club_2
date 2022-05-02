@@ -312,8 +312,8 @@ body .container section:nth-of-type(4) .bgvideo {
   right: 0;
   bottom: 0;
   z-index: -1;
-  -webkit-filter: brightness(23%);
-          filter: brightness(23%);
+  -webkit-filter: brightness(28%);
+          filter: brightness(28%);
 }
 
 body .container section:nth-of-type(4) .firstpar {
