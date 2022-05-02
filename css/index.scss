@@ -10,6 +10,15 @@
         color: antiquewhite;
         text-decoration: none;
     }
+    ::-moz-selection { /* Code for Firefox */
+        color: red;
+        background: yellow;
+    }
+      
+    ::selection {
+        color: grey;
+        background: antiquewhite;
+    }
 }
 
 // body ===================================
@@ -290,7 +299,7 @@ body{
                     margin-left: 10%;
                     margin-right: 10%;
                     :nth-child(2),:last-child{
-                        margin-left: 20px;
+                        margin-left: 50px;
                     }
 
                     p{

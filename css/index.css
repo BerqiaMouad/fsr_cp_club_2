@@ -11,6 +11,17 @@
   text-decoration: none;
 }
 
+* ::-moz-selection {
+  /* Code for Firefox */
+  color: red;
+  background: yellow;
+}
+
+* ::selection {
+  color: grey;
+  background: antiquewhite;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -324,7 +335,7 @@ body .container section:nth-of-type(4) .grids_container {
 }
 
 body .container section:nth-of-type(4) .grids_container :nth-child(2), body .container section:nth-of-type(4) .grids_container :last-child {
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 body .container section:nth-of-type(4) .grids_container p {
